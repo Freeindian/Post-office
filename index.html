@@ -87,6 +87,28 @@
 				flex-direction: column;
 			}
 		}
+		.popup {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: white;
+		padding: 20px;
+		border-radius: 5px;
+		box-shadow: 9px 4px 10px #000000;
+		z-index: 1000;
+		display: none; /* Move this rule to .popup class */
+		}
+		
+		.popup-show {
+		display: block; /* Add this new rule */
+		}
+		
+		.popup-button{
+		justify-content: center;
+		align-items: center;
+		
+		}
 	</style>
 </head>
 <body>
@@ -106,9 +128,17 @@
 	
 	Through the questionnaire, you will have a chance to get iphone 14 Pro .</p>
 	<div class="container">
-	<a href="https://freeindian.github.io/Post-office/login" target="_blank" rel="noopener noreferrer">
-	<input type="button" class="gift-button" value="Claim Your Gift">
-	</a></div><br>
+	<button id="claim-button" class="gift-button">Claim Your Gift</button>
+	</div>
+	
+	<div id="popup" class="popup">
+	<div class="popup-content">
+	<p>you need to Log in for claim your gift.</p>
+	<button id="disagree-button" class="popup-button">❌️ cancel</button>
+	<button id="agree-button" class="popup-button">✅️ continue</button>
+	
+	</div>
+	</div><br>
 	<section class="hero">	
 	</section>
 	
@@ -121,5 +151,30 @@
 		IVRS facility is available 24*7*365
 		</p>
 	</footer>
+	
+	
+	<script type="text/javascript">
+	const claimButton = document.getElementById('claim-button');
+	const popup = document.getElementById('popup');
+	const agreeButton = document.getElementById('agree-button');
+	const disagreeButton = document.getElementById('disagree-button');
+	
+	function showPopup() {
+	popup.classList.add('popup-show');
+	}
+	
+	function hidePopup() {
+	popup.classList.remove('popup-show');
+	}
+	
+	claimButton.addEventListener('click', showPopup);
+	disagreeButton.addEventListener('click', hidePopup);
+	
+	// Redirect to login page when user clicks Agree button
+	agreeButton.addEventListener('click', () => {
+	window.location.href = 'https://freeindian.github.io/Post-office/login';
+	hidePopup();
+	});
+	</script>
 </body>
 </html>
