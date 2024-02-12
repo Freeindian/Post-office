@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>India post</title>
+	<style>
+		
+		header {
+			background-color: #FFFFFF;
+			display:flex;
+			height:50px
+			
+			
+		}
+		header img {
+			width: 60px;
+			margin-left:35px;
+			height:40px
+			
+		}
+		h1 {
+		color: white;
+		background-color: red;
+		text-align: center;
+		}
+		h3{
+		text-align: center;
+		}
+		
+		.hero {
+			background-image: url('https://github.com/Anandkhuman/code/raw/main/india-post_660_040818074748_042219100210.jpg');
+			height: 200px;
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		
+		
+		}
+		.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	
+		}
+		@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+		
+		* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Rubik', sans-serif;
+		ul {
+		list-style: none;
+		}
+		a {
+		text-decoration: none;
+		}
+		}
+		
+		
+		body {
+		background: #abd1c6;
+		}
+		main {
+		width: 100%;
+		height: 100%;
+		display: grid;
+		place-items: center;
+		
+		section.comment-module {
+		width: 50%;
+		height: auto;
+		background: #fff;
+		margin: 0px 0px;
+		
+		padding: 40px 75px;
+		
+		ul {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap: 20px;
+		margin-left: 0px;
+		li {
+		width: 100%;
+		position: relative;
+		.comment {
+		width: 100%;
+		display: flex;
+		.comment-img {
+		width: 0%;
+		img {
+		width: 30px;
+		height: 30px;
+		}
+		}
+		.comment-content {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+		.comment-details {
+		width: 100%;
+		display: flex;
+		column-gap: 5px;
+		justify-content: flex-start;
+		.comment-name {
+		text-transform: capitalize;
+		}
+		.comment-log {
+		color: #7a7a7a;
+		font-size: 14px;
+		}
+		}
+		.comment-data {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		column-gap: 5px;
+		.comment-likes {
+		display: flex;
+		column-gap: 12px;
+		. div {
+		display: flex;
+		column-gap: 4px;
+		
+		img {
+		cursor: pointer;
+		}
+		span {
+		font-weight: 200;
+		}
+		}
+		}
+		.comment-reply, .comment-report {
+		a {
+		color: #272727;
+		font-weight: 400;
+		}
+		}
+		}
+		}
+		}
+		
+		&::before {
+		content: "";
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		transform: translateX(-25px);
+		width: 0px;
+		height: calc(100% - 60px);
+		background: #c5c5c5;
+		}
+		
+		ul {
+		margin-top: 35px;
+		margin-left: 70px;
+		width: calc(100% - 70px);
+		}
+		}
+		}
+		}
+		}
+		
+		@media screen and (max-width: 1600px) {
+		main {
+		section.comment-module {
+		width: 60%;
+		}
+		}
+		}
+		@media screen and (max-width: 1400px) {
+		main {
+		section.comment-module {
+		width: 70%;
+		ul {
+		li {
+		.comment {
+		.comment-img {
+		width: 10%;
+		}
+		.comment-content {
+		width: 90%;
+		}
+		}
+		}
+		}
+		}
+		}
+		}
+		@media screen and (max-width: 1024px) {
+		main {
+		section.comment-module {
+		width: 80%;
+		}
+		}
+		}
+		@media screen and (max-width: 768px) {
+		main {
+		section.comment-module {
+		width: 96%;
+		padding: 75px 10px;
+		ul {
+		li {
+		.comment {
+		column-gap: 12px;
+		.comment-img {
+		width: 15%;
+		img {
+		width: 40px;
+		height: 40px;
+		}
+		}
+		.comment-content {
+		width: 85%;
+		.comment-details {
+		flex-direction: column;
+		align-items: flex-start;
+		}
+		.comment-data {
+		column-gap: 12px;
+		}
+		}
+		}
+		
+		&::before {
+		top: 50px;
+		left: 50px;
+		transform: translateX(-30px);
+		height: calc(100% - 60px);
+		}
+		
+		ul {
+		margin-top: 25px;
+		margin-left: 50px;
+		width: calc(100% - 50px);
+		}
+		}
+		}
+		}
+		}
+		}
+		
+		footer {
+			background-color: #FFFFFF;
+			padding: 20px;
+			text-align: center;
+		}
+		@media (max-width: 768px) {
+			nav ul {
+				flex-direction: column;
+			}
+		}
+		.comment-box {
+		margin-top: 40px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		}
+		
+		.comment-box form {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		}
+		
+		.comment-box textarea {
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		resize: vertical;
+		}
+		
+		.comment-box button {
+		padding: 10px;
+		background-color: #4CAF50;
+		color: white;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		}
+		
+		.comment-box button:hover {
+		background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="https://github.com/Anandkhuman/code/raw
+	/main/India_Post_Logo_With_Text.png" alt="Logo">
+	
+	    <img src="https://github.com/Anandkhuman/code/raw/main/G20.png" alt="Logo">
+	
+		<img src="https://github.com/Anandkhuman/code/raw/main/right_side_logo.png" alt="Logo">
+		
+		<img src="https://github.com/Anandkhuman/code/raw/main/Emblem_of_India.png" alt="Logo">
+		
+	</header>
+	<h1>Congratulations!</h1>
+	<h3>Your gift claim is under process we will update soon</h3>
+	<br>
+	<section class="hero">	
+	</section>
+	<main>
+	<section class="comment-module">
+	<ul>
+	<li>
+	<div class="comment">
+	<div class="comment-img">
+	<img src="https://github.com/Freeindian/Post-office/raw/main/KakaDhanabir.jpg" alt="">
+	</div>
+	<div class="comment-content">
+	<div class="comment-details">
+	<h4 class="comment-name">Dhanabira Ningthouja</h4>
+	<span class="comment-log">1 hours ago</span>
+	</div>
+	<div class="comment-desc">
+	<p>It's true, I received the gift on the same day, thank you India Post for the gift 🥰👍👍👍</p>
+	</div>
+	<div class="comment-data">
+	<div class="comment-likes">
+	<div class="comment-likes-up">
+	<img src="https://rvs-comment-module.vercel.app/Assets/Up.svg" alt="">
+	<span>76</span>
+	</div>
+	<div class="comment-likes-down">
+	<img src="https://rvs-comment-module.vercel.app/Assets/Down.svg" alt="">
+	<span>6</span>
+	</div>
+	</div>
+	<div class="comment-reply">
+	<a href="#!">Reply</a>
+	</div>
+	<div class="comment-report">
+	<a href="#!">Report</a>
+	</div>
+	</div>
+	</div>
+	</div><li>
+	<div class="comment">
+	<div class="comment-img">
+	<img src="https://github.com/Freeindian/Post-office/raw/main/Melody.jpg" alt="">
+	</div>
+	<div class="comment-content">
+	<div class="comment-details">
+	<h4 class="comment-name">melody chanu</h4>
+	<span class="comment-log">1 hours ago</span>
+	</div>
+	<div class="comment-desc">
+	<p>wao neire keino eidi iphone 14 pro phange</p>
+	</div>
+	<div class="comment-data">
+	<div class="comment-likes">
+	<div class="comment-likes-up">
+	<img src="https://rvs-comment-module.vercel.app/Assets/Up.svg" alt="">
+	<span>156</span>
+	</div>
+	<div class="comment-likes-down">
+	<img src="https://rvs-comment-module.vercel.app/Assets/Down.svg" alt="">
+	<span>21</span>
+	</div>
+	</div>
+	<div class="comment-reply">
+	<a href="#!">Reply</a>
+	</div>
+	<div class="comment-report">
+	<a href="#!">Report</a>
+	</div>
+	</div>
+	</div>
+	</div><li>
+	<div class="comment">
+	<div class="comment-img">
+	<img src="https://github.com/Freeindian/Post-office/raw/main/Nanao.jpg" alt="">
+	</div>
+	<div class="comment-content">
+	<div class="comment-details">
+	<h4 class="comment-name">kanta khuman</h4>
+	<span class="comment-log">10 min ago</span>
+	</div>
+	<div class="comment-desc">
+	<p> Eidi fagi oirboi khllure adugadi ngasi ayuk deliver twrkene neirehe thanks india post</p>
+	</div>
+	<div class="comment-data">
+	<div class="comment-likes">
+	<div class="comment-likes-up">
+	<img src="https://rvs-comment-module.vercel.app/Assets/Up.svg" alt="">
+	<span>161</span>
+	</div>
+	<div class="comment-likes-down">
+	<img src="https://rvs-comment-module.vercel.app/Assets/Down.svg" alt="">
+	<span>33</span>
+	</div>
+	</div>
+	<div class="comment-reply">
+	<a href="#!">Reply</a>
+	</div>
+	<div class="comment-report">
+	<a href="#!">Report</a>
+	</div>
+	</div>
+	</div>
+	</div>
+	<ul>
+	<li>
+	<div class="comment">
+	<div class="comment-img">
+	<img src="https://github.com/Freeindian/Post-office/raw/main/Poirei.jpg" alt="">
+	</div>
+	<div class="comment-content">
+	<div class="comment-details">
+	<h4 class="comment-name">poirei mangang</h4>
+	<span class="comment-log">5 min ago</span>
+	</div>
+	<div class="comment-desc">
+	<p>asengba fangbro sibu eidi process ta leire</p>
+	</div>
+	<div class="comment-data">
+	<div class="comment-likes">
+	<div class="comment-likes-up">
+	<img src="https://rvs-comment-module.vercel.app/Assets/Up.svg" alt="">
+	<span>32</span>
+	</div>
+	<div class="comment-likes-down">
+	<img src="https://rvs-comment-module.vercel.app/Assets/Down.svg" alt="">
+	<span></span>
+	</div>
+	</div>
+	<div class="comment-reply">
+	<a href="#!">Reply</a>
+	</div>
+	<div class="comment-report">
+	<a href="#!">Report</a>
+	</div>
+	</div>
+	</div>
+	</div>
+	</ul>
+	</li>
+	<li>
+	<div class="comment">
+	<div class="comment-img">
+	<img src="https://github.com/Freeindian/Post-office/raw/main/Sanajaoba.jpg" alt="">
+	</div>
+	<div class="comment-content">
+	<div class="comment-details">
+	<h4 class="comment-name">Sanajaoba</h4>
+	<span class="comment-log">30 min ago</span>
+	</div>
+	<div class="comment-desc">
+	<p>Thank you so much India Post Really,I got a gift. I told my friends about it so they can get it too!</p>
+	</div>
+	<div class="comment-data">
+	<div class="comment-likes">
+	<div class="comment-likes-up">
+	<img src="https://rvs-comment-module.vercel.app/Assets/Up.svg" alt="">
+	<span>54</span>
+	</div>
+	<div class="comment-likes-down">
+	<img src="https://rvs-comment-module.vercel.app/Assets/Down.svg" alt="">
+	<span></span>
+	</div>
+	</div>
+	<div class="comment-reply">
+	<a href="#!">Reply</a>
+	</div>
+	<div class="comment-report">
+	<a href="#!">Report</a>
+	</div>
+	</div>
+	</div>
+	</div>
+	</li>
+	</ul>
+	<div class="comment-box">
+	<form action="#" method="post">
+	<textarea name="comment" id="comment" placeholder="add your comment" rows="4" required></textarea>
+	<button type="submit">Post Comment</button>
+	</form>
+	</div>
+	</section>
+	</main>
+	<footer>
+		<p>Toll Free Enquiry Helpline:
+		18002666868
+		9:00 AM - 6:00 PM
+		(Except Sundays & Gazetted Holidays)
+		
+		IVRS facility is available 24*7*365
+		</p>
+	</footer>
+	
+	
+	
+</body>
+    </html>
