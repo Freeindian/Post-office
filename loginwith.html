@@ -1,79 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <style type="text/css">
-      body {
-    
-    box-sizing: border-box;
-    margin: 10px;
-    padding: 50px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
     .wrapper {
-    
-    
-    margin: 0;
-    padding: 0;
-    height: 55px;
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, .4);
+      padding-top: 40px;
     }
-    
-    a {
-    padding: 0px 10px 0px 0px;
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: white;
+      text-align: center;
+      padding: 50px 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+      border-radius: 3px;
     }
-    
-    .wrapper a:nth-child(1) {
-    color: #4867AA;
-    cursor: pointer;
-    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
-    transition: all ease-in-out 150ms;
+
+    .social-login {
+      display: block;
+      width: 50%;
+      margin: 5px auto;
+      text-decoration: none;
+      padding: 10px 15px;
+      color: #fff;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      transition: all .3s ease-in-out;
     }
-    
-    .wrapper a:nth-child(1):hover {
-    margin-top: -10px;
-    text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);
-    transform: translate(0, -8);
+
+    .social-login:hover {
+      box-shadow: 0 10px 15px -5px rgba(0, 0, 0, .4);
     }
-    
-    
-    
-    .wrapper a:nth-child(2) {
-    color: #db4437;
-    cursor: pointer;
-    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-    transition: all ease-in-out 150ms;
+
+    a.fb-login {
+      background-color: #3B5998;
     }
-    
-    .wrapper a:nth-child(2):hover {
-    margin-top: -10px;
-    text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
-    transform: translate(0, -5);
+
+    a.google-login {
+      background-color: #db4437;
     }
-    
-    .container{
-    margin-bottom:-100px;
+
+    form {
+      max-width: 250px;
+      margin: 0 auto;
+      text-align: left;
     }
-    
-    
-    </style>
+
+    p.seperator {
+      margin: 25px;
+    }
+
+    div.group {
+      margin-top: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    div.group input {
+      width: 100%;
+      padding: 10px 4px;
+      outline: none;
+    }
+
+    a.forget-link {
+      color: black;
+      display: block;
+      margin: 10px 0;
+    }
+
+    input[type="submit"] {
+      padding: 15px 35px;
+      outline: none;
+      border: None;
+      background-color: #20c198;
+      color: white;
+      transition: all .3s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+      cursor: pointer;
+      box-shadow: 0 10px 15px -5px rgba(0, 0, 0, .4);
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      .social-login {
+        width: 100%;
+      }
+
+      form {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="wrapper">
     <div class="container">
-        <h1>Login with</h1>
-        <div class="wrapper">
-       <a href="https://freeindian.github.io/Post-office/login" target="_blank">
-       <i class="fa fa-3x fa-facebook-square">acebook</i>
-       </a>
-       <a href="https://freeindian.github.io/Post-office/gmail" target="_blank">
-       <i class="fa fa-3x fa-envelope">ail</i>
-       </a>
-       
-        </div><br><br><b>
-        <p>you need to login for claim your gift</p></b></div>
-        
+      <a href="https://freeindian.github.io/Post-office/login" class="fb-login social-login">
+        Login with Facebook
+      </a>
+      <a href="https://freeindian.github.io/Post-office/gmail" class="google-login social-login">
+        Login with Google
+      </a>
+      <h3>you need to login for claim gift</h3>
+    </div>
+  </div>
 </body>
 </html>
