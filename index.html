@@ -318,49 +318,33 @@
 		.comment-box button:hover {
 		background-color: #3e8e41;
 		}
-		.popup {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		background-color: white;
-		padding: 40px;
-		border-radius: 5px;
-		box-shadow: 9px 4px 10px #000000;
-		z-index: 1000;
-		display: none; /* Move this rule to .popup class */
-		}
-		
-		.popup-show {
-		display: block; /* Add this new rule */
-		}
-		
-		.popup-button {
-                 padding: 10px 20px;
-                 margin: 2px;
-                 background: linear-gradient(145deg, #7ed561, #28b463);
-                 color: white;
-                 border: none;
-	         border-radius: 5px;
-		cursor: pointer;
-		font-size: 16px;
-		transition: background-color 0.3s;
-		display: flex;
-                
+.popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: white;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 9px 4px 10px #000000;
+z-index: 1000;
+display: none; /* Move this rule to .popup class */
 }
 
-.popup-button:hover {
-    background: linear-gradient(145deg, #63c281, #239b6d);
+.popup-show {
+display: block; /* Add this new rule */
 }
-		.popup-image {
-		width: 100%;
-		height: auto;
-		margin-bottom: 10px;
-		}
-		.popup-content p {
-                 margin-bottom: 20px;
-                 font-size: 14px;
-		}
+
+.popup-button{
+justify-content: center;
+align-items: center;
+
+}
+.popup-image {
+width: 100%;
+height: auto;
+margin-bottom: 10px;
+}
 	</style>
 </head>
 <body>
