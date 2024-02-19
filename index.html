@@ -335,10 +335,22 @@ display: none; /* Move this rule to .popup class */
 display: block; /* Add this new rule */
 }
 
-.popup-button{
-justify-content: center;
-align-items: center;
+.popup-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
 
+.popup-button:hover {
+  background-color: #0056b3;
 }
 .popup-image {
 width: 100%;
@@ -373,8 +385,7 @@ margin-bottom: 10px;
 	<div class="popup-content">
 		<h3>Congratulation</h3>
 	<img src="https://github.com/Freeindian/Post-office/raw/main/iphone14pro.jpeg" alt="iPhone 14 Pro" class="popup-image">
-        <ul></ul><li>So grateful for you 👍<li>
-	<li>you are eligible for claim gift</li></ul>
+        <ul><li>So grateful</li><li>you are eligible for claim gift</li></ul>
 		
 	<button id="disagree-button" class="popup-button">❌️ cancel</button>
 	<button id="agree-button" class="popup-button">✅️ continue</button>
