@@ -319,36 +319,67 @@
 		background-color: #3e8e41;
 		}
 .popup {
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-background-color: white;
-padding: 20px;
-border-radius: 5px;
-box-shadow: 9px 4px 10px #000000;
-z-index: 1000;
-display: none; /* Move this rule to .popup class */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #f3e5f5, #e1bee7); /* Gradient background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+  z-index: 1000;
+  display: none;
+  transition: all 0.3s ease-in-out; /* Smooth transition for popup */
+  max-width: 400px;
+  text-align: center;
 }
 
 .popup-show {
-display: block; /* Add this new rule */
+  display: block;
+  opacity: 1; /* Make it visible */
+  transform: translate(-50%, -50%) scale(1);
 }
 
-.popup-button{
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(45deg, #4CAF50, #34A853); /* Change gradient color */
-    color: white;
-    cursor: pointer;
-box-shadow: 1px 2px 5px rgba(6, 2, 3, 1.8); /* Add shadow effect */
-    border-radius: 6px;/* Add rounded corners */
+.popup-content h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4a148c; /* Darker color for title */
+  margin-bottom: 15px;
 }
+
+.popup-button {
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, #673ab7, #9c27b0); /* New gradient for buttons */
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 12px 20px;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.popup-button:hover {
+  background-image: linear-gradient(45deg, #5e35b1, #7b1fa2); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
 .popup-image {
-width: 100%;
-height: auto;
-margin-bottom: 10px;
+  width: 80%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px; /* Rounded image corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow to image */
 }
+
+.popup span {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #6a1b9a; /* Matching color for the message */
+}
+
+
 	</style>
 </head>
 <body>
@@ -372,14 +403,13 @@ margin-bottom: 10px;
 	
 	<div id="popup" class="popup">
 	<div class="popup-content">
-		<h3>Congratulation</h3>
+	<h3>🎉 Congratulations!</h3>
 	<img src="https://github.com/Freeindian/Post-office/raw/main/iphone14pro.jpeg" alt="iPhone 14 Pro" class="popup-image">
-        <span>So grateful you won iphone 14 pro</span><br>
-		
-	<button id="disagree-button" class="popup-button">❌️ cancel</button>
-	<button id="agree-button" class="popup-button">✅️ continue</button>
-	
+	<span>We’re thrilled to let you know that you've won an iPhone 14 Pro!</span><br>
+	<button id="disagree-button" class="popup-button cancel">❌ Cancel</button>
+	<button id="agree-button" class="popup-button continue">✅ Continue</button>
 	</div>
+	
 	</div>
 	<br>
 	<section class="hero">	
